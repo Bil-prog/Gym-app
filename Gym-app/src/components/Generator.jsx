@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 //import React from 'react'
 import { useState } from "react";
 import Wrapper from "./Wrapper";
@@ -63,7 +64,7 @@ export default function Generator(props) {
       <Header index={'02'} title={'Lock on targets'} description={'Select the muscles judged for annihilation.'}/>
       <div className="bg-slate-950 border border-solid border-blue-400 rounded-lg flex flex-col">
         <button onClick={toggleModal} className="relative p-3 flex items-center justiy-center">
-          <p>{muscles.length == 0 ? 'Select muscle groups' : muscles.join('')}</p>
+          <p>{muscles.length == 0 ? 'Select muscle groups' : muscles.join(' ')}</p>
           <i className="fa-solid fa-caret-down absolute right-3 top-1/2 -translate-y-1/2"></i>
         </button>
         {showModal && (
@@ -89,7 +90,7 @@ export default function Generator(props) {
               onClick={() => {
                 setGoal(scheme)}} 
               className={'bg-slate-950 border duration-200 px-4 hover:border-blue-600 py-3 rounded-lg' + (scheme === goal ? ' border-blue-600' : ' border-blue-400')} key={schemeIndex}>
-              <p className="capitalize">{scheme.replaceAll('_', "")}</p>
+              <p className="capitalize">{scheme.replaceAll('_', " ")}</p>
               </button>
           );
         })}
