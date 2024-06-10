@@ -6,11 +6,11 @@ import ExerciseCard from './ExerciseCard'
 export default function Workout(props) {
   const {workout} = props
   return (
-    <Wrapper id={'workout'} header={"Welcome to"} title={['The', 'DANGER', 'zone']}>
+    <Wrapper id={'workout'} title={['Your', 'CURATED', 'sets']}>
       <div>
         {workout.map((exercise, i) => {
           return(
-            <ExerciseCard i={i} exercise={exercise} key={i}/>
+            <ExerciseCard i={i} exercise={exercise} key={i} />
           )
         })}
       </div>

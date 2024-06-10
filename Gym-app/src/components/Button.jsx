@@ -5,7 +5,7 @@ import React from 'react'
 export default function Button(props) {
     const {text, func } = props;
   return (
-    <button onClick={func} className='px-8 py-4 rounded-md border-[2px] border-blue-400 border-solid bg-slate-950 duration-200 mx-auto blueShadow'>
+    <button onClick={func} className='px-8 mx-auto py-4 rounded-md border-[2px] bg-amber-950 border-amber-400 border-solid duration-200 hover:border-amber-600'>
         <p>{text}</p>
     </button>
   )
